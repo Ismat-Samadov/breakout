@@ -1,0 +1,62 @@
+/* ============================================================
+   globals.css — Base styles for Breakout Neon Edition
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* ── Root variables ────────────────────────────────────────── */
+:root {
+  --neon-cyan:  #00d4ff;
+  --neon-pink:  #ff0080;
+  --neon-green: #00ff9d;
+  --bg-base:    #02020a;
+}
+
+/* ── Reset / base ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  /* Prevent bounce / overscroll on iOS */
+  overscroll-behavior: none;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: #e2e8f0;
+  font-family: var(--font-mono), ui-monospace, 'Cascadia Code', monospace;
+  -webkit-font-smoothing: antialiased;
+  /* Prevent text selection during gameplay */
+  user-select: none;
+}
+
+/* ── Canvas ─────────────────────────────────────────────────── */
+canvas {
+  display: block;
+  image-rendering: pixelated;  /* keep pixels sharp when scaling */
+  touch-action: none;          /* prevent default touch scroll on canvas */
+}
+
+/* ── Scrollbar (desktop) ────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a3a;
+  border-radius: 3px;
+}
+
+/* ── Utility: neon text glow ────────────────────────────────── */
+.neon-cyan {
+  text-shadow: 0 0 8px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+}
+.neon-pink {
+  text-shadow: 0 0 8px var(--neon-pink), 0 0 20px var(--neon-pink);
+}

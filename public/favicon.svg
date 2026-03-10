@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="64" height="64" rx="12" fill="#05050f"/>
+
+  <!-- Brick rows (neon) -->
+  <rect x="8"  y="10" width="48" height="7" rx="2" fill="#ff0080" opacity="0.9" filter="url(#glow)"/>
+  <rect x="8"  y="20" width="48" height="7" rx="2" fill="#ff6600" opacity="0.9" filter="url(#glow)"/>
+  <rect x="8"  y="30" width="22" height="7" rx="2" fill="#00d4ff" opacity="0.9" filter="url(#glow)"/>
+  <rect x="34" y="30" width="22" height="7" rx="2" fill="#00d4ff" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Ball -->
+  <circle cx="32" cy="46" r="4" fill="#ffffff" filter="url(#glow)" opacity="0.95"/>
+
+  <!-- Paddle -->
+  <rect x="16" y="54" width="32" height="5" rx="2.5" fill="#00d4ff" filter="url(#glow)"/>
+</svg>
